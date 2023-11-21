@@ -11,14 +11,18 @@ body{
 }
 
 #header{
-    width: 100%;
+  vertical-align: middle;
+    max-width: 100%;
     height: 80vh;
     background-image: url(images/bgst.png);
     background-size: cover;
     margin:30px 10px ;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    
+
 
 }
+
 .bg{
     width: 100%;
     min-width: 100vh;
@@ -68,30 +72,32 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 10px 20px;
+    margin: 10px 10px;
 }
 
 
 /*------------about-----------------*/
 #about{
-  padding: 80px 80px;
+  padding: 80px 10%;
   color: rgb(94, 60, 26);
   font-family: 'Kanit', sans-serif;
+  margin:30px 10px ;
 }
 .row{
-  display: flex;
+  display: grid;
+  grid-template-columns: 50% 50%;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .about-col-1{
-  flex-basis: 35%;
+  grid-area: 40%;
 }
 .about-col-1 img{
   width: 100%;
   border-radius: 15px;
 }
 .about-col-2{
-  flex-basis: 60%;
+  grid-area: 60%;
 }
 .sub{
   font-size: 50px;
@@ -121,12 +127,12 @@ nav{
   font-family:'Segoe UI';
 }
 .text{
-    margin: 30px 300px;
+    margin: 30px 10%;
     font-family: 'Kanit', sans-serif;
 }
 
 #portfolio{
-  padding: 30px 150px ;
+  padding: 30px 10% ;
   color: rgb(102, 76, 46);
 }
 
@@ -140,14 +146,14 @@ nav{
 .card1{
   box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.2);
   max-width: 250px;
-  margin: 20px 10px;
+  margin: 20px 5px;
   margin-top: 20px;
   text-align: center;
   background: white;
   
 }
 
-.card1 .schpro {
+.card1 .schpro1 {
 
   top: 50%;
   left: 50%;
@@ -163,16 +169,31 @@ nav{
   transform: translateY(4px);
   
 }
-
-.schpro {
+.schpro1 {
 
   top: 50%;
   left: 50%;
 
+  background-color: #8f7343;
+  color: white;
+  font-size: 25px;
+  padding: 10px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 5px #1f1f1f;
+  transform: translateY(4px);
+  
+}
+.schpro {
+
+  top: 50%;
+  margin:10px 5% 5%;
+
   background-color: rgb(134, 134, 134);
   color: white;
   font-size: 20px;
-  padding: 10px 24px;
+  padding: 10px 10%;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -185,6 +206,7 @@ nav{
 .container{
   font-size: 16px;
   font-weight: 400;
+  margin: 5px 20px;
   font-family: 'Kanit', sans-serif;
 
 }
@@ -278,26 +300,26 @@ padding: 5px 20px;
 }
 
 #schpro{
-  padding: 30px 150px ;
+  padding: 30px 10% ;
   max-width: 90%;
     margin: auto;
   box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.263);
 }
 
 #schact{
-  padding: 30px 150px ;
+  padding: 30px 10% ;
   max-width: 90%;
     margin: auto;
   box-shadow: 0 6px 15px 0 rgba(43, 3, 176, 0.263);
 }
 #exstu{
-  padding: 30px 150px ;
+  padding: 30px 10% ;
   max-width: 90%;
     margin: auto;
   box-shadow: 0 6px 15px 0 rgba(43, 3, 176, 0.263);
 }
 #ldsh{
-  padding: 30px 150px ;
+  padding: 30px 10% ;
   max-width: 90%;
     margin: auto;
   box-shadow: 0 6px 15px 0 rgba(43, 3, 176, 0.263);
@@ -319,7 +341,7 @@ font-family: 'Kanit', sans-serif;
 
 }
 #contact{
-  padding: 80px 80px;
+  padding: 80px 10%;
   color: rgb(94, 60, 26);
   font-family: 'Kanit', sans-serif;
 }
@@ -327,9 +349,7 @@ font-family: 'Kanit', sans-serif;
   font-size:20px ;
   font-weight: 475;
   font-family:'Segoe UI';
-  padding-right: 50px;
-  padding-left: 40px;
-  padding-top: 40px;
+  padding: 40px 5%;
 }
 .ctbut {
   background-color: rgb(189, 138, 36);
@@ -343,3 +363,107 @@ font-family: 'Kanit', sans-serif;
   font-family: 'Kanit', sans-serif;
   width:10% ;
 }
+@media screen and (max-width:600px) {
+  .logo{
+    max-width: fit-content;
+  }
+  #header{
+    max-width: fit-content;
+  }
+  .header-text{
+    max-width: fit-content;
+    font-size: 36px;
+  }
+  .text{
+   width:fit-content ;
+  }
+  .about-col-1{
+    max-width: fit-content;
+    grid-template-columns: 1fr;
+
+  }
+  .row{
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr ;
+  }
+  #about{
+    grid-template-columns: 1fr ;
+    
+  }
+  
+  .sub{
+    font-size: 40px;
+  }
+  .sub1{
+    font-size: 40px;
+  }
+  .word{
+    font-size: 16px;
+  }
+  .big{
+    font-size: 10px;
+  }
+  .small{
+    font-size: 8px;
+  }
+  .nav ul li a{
+    font-size: 10px;
+  }
+  .abme{
+  font-size:15px ;
+  font-weight: 500;
+  font-family:'Segoe UI';
+  }
+  .card1{
+    max-width: fit-content;
+  }
+  .ctm{
+    font-size: 16px;
+  }
+  .ctbut {
+    background-color: rgb(189, 138, 36);
+    color: white;
+    font-size: 14px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 3px #1f1f1f;
+    font-family: 'Kanit', sans-serif;
+    width:100% ;
+  }
+  .schpro {
+
+    top: 50%;
+    margin: 10% 10%;
+  
+    background-color: rgb(134, 134, 134);
+    color: white;
+    font-size: 10px;
+    padding: 10px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 3px #1f1f1f;
+    transform: translateY(4px);
+    font-family: 'Kanit', sans-serif;
+    
+  }
+  .schpro1 {
+
+    top: 50%;
+    left: 50%;
+  
+    background-color: #8f7343;
+    color: white;
+    font-size: 25px;
+    padding: 10px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 5px #1f1f1f;
+    transform: translateY(4px);
+    
+  }
+}
+
